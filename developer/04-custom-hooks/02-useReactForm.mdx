@@ -24,7 +24,7 @@ The hook returns an object containing the following properties:
 
 ```tsx
 import { z } from 'zod';
-import { useReactForm } from '@fluctux/hooks';
+import { useReactForm } from '@fluctux/hooks'; // [!code highlight]
 
 const schema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -32,7 +32,7 @@ const schema = z.object({
 });
 
 const MyForm = () => {
-  const { register, handleSubmit, errors } = useReactForm({ ZOD_SCHEMA: schema });
+  const { register, handleSubmit, errors } = useReactForm({ ZOD_SCHEMA: schema }); // [!code highlight]
 
   const onSubmit = (data: any) => {
     console.log(data);
