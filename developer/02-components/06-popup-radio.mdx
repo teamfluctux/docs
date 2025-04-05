@@ -9,7 +9,7 @@ The FxPopupRadio component is a Popup radio button implementation in React with 
 
 ## Usage
 ```tsx
-import { FxPopupRadio } from '@fluctux/ui'
+import { FxPopupRadio } from '@fluctux/ui' // [!code highlight]
 
 const DOC_TYPE = [
     {
@@ -32,7 +32,7 @@ const handleDocTypeChange = (value: string) => {
     console.log('Selected value:', value);
 }
 
-<FxPopupRadio
+<FxPopupRadio // [!code highlight]
     onValueChange={handleDocTypeChange}
     align='start'
     classNames={{
